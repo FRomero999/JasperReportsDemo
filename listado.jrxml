@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.13.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85ebbad7-6438-4fba-a882-cc58b9f643f9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CRM"/>
+	<parameter name="TITLE" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Listado"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    any_value(crm.contacto.nombre),
+    any_value(crm.contacto.email),
+    any_value(crm.contacto.empresa),    
+	any_value(crm.contacto.telefono),
+	any_value(crm.contacto.apellidos)
+FROM crm.contacto]]>
+	</queryString>
+	<field name="any_value(crm.contacto.email)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="any_value(crm.contacto.email)"/>
+		<property name="com.jaspersoft.studio.field.label" value="any_value(crm.contacto.email)"/>
+	</field>
+	<field name="any_value(crm.contacto.telefono)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="any_value(crm.contacto.telefono)"/>
+		<property name="com.jaspersoft.studio.field.label" value="any_value(crm.contacto.telefono)"/>
+	</field>
+	<field name="any_value(crm.contacto.nombre)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="any_value(crm.contacto.nombre)"/>
+		<property name="com.jaspersoft.studio.field.label" value="any_value(crm.contacto.nombre)"/>
+	</field>
+	<field name="any_value(crm.contacto.apellidos)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="any_value(crm.contacto.apellidos)"/>
+		<property name="com.jaspersoft.studio.field.label" value="any_value(crm.contacto.apellidos)"/>
+	</field>
+	<field name="any_value(crm.contacto.empresa)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="any_value(crm.contacto.empresa)"/>
+		<property name="com.jaspersoft.studio.field.name" value="any_value(crm.contacto.empresa)"/>
+	</field>
+	<sortField name="any_value(crm.contacto.nombre)" order="Descending"/>
+	<variable name="any_value(crm.contacto.nombre)1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{any_value(crm.contacto.nombre)}]]></variableExpression>
+	</variable>
+	<group name="any_value(crm.contacto.nombre)">
+		<groupExpression><![CDATA[$F{any_value(crm.contacto.nombre)}]]></groupExpression>
+	</group>
+	<group name="any_value(crm.contacto.email)">
+		<groupExpression><![CDATA[$F{any_value(crm.contacto.email)}]]></groupExpression>
+	</group>
+	<group name="any_value(crm.contacto.telefono)">
+		<groupExpression><![CDATA[$F{any_value(crm.contacto.telefono)}]]></groupExpression>
+	</group>
+	<group name="any_value(crm.contacto.apellidos)">
+		<groupExpression><![CDATA[$F{any_value(crm.contacto.apellidos)}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="10" width="290" height="50" uuid="7a9a8e45-9577-40fe-9bc3-121e06105c8d"/>
+				<textElement>
+					<font size="29"/>
+				</textElement>
+				<text><![CDATA[Listado de Usuarios]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="ea566014-21af-40aa-9f0a-8fd1fc63b5c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0706032b-e4f6-413f-8731-9acf5ffbb30f"/>
+				</reportElement>
+				<text><![CDATA[any_value(crm.contacto.email)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="f95e92eb-b9ef-4829-babe-3bf086bc6227">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b4469ad-8b8f-431a-b2ee-a211a7e04219"/>
+				</reportElement>
+				<text><![CDATA[any_value(crm.contacto.telefono)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="da83e839-751c-484c-b489-743e18dcd664">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc3efdae-84fe-44b2-ba21-110029300f80"/>
+				</reportElement>
+				<text><![CDATA[any_value(crm.contacto.nombre)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="41ff40f2-c614-41ff-a6f8-99a789732666">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14310023-d382-40ff-81ce-1f7ce017684e"/>
+				</reportElement>
+				<text><![CDATA[any_value(crm.contacto.apellidos)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="89dcb934-a0ea-4fac-90ca-b1303e209826">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88a61121-0476-4201-ba70-b94bfb369392"/>
+				</reportElement>
+				<text><![CDATA[any_value(crm.contacto.empresa)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="12934aa7-72b8-41e1-96f5-c185d4005a5a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0706032b-e4f6-413f-8731-9acf5ffbb30f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{any_value(crm.contacto.email)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="eb483af8-c9a8-442a-abaf-832c84a207c4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b4469ad-8b8f-431a-b2ee-a211a7e04219"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{any_value(crm.contacto.telefono)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="2976d1dc-861d-42c3-8784-69d384829495">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc3efdae-84fe-44b2-ba21-110029300f80"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{any_value(crm.contacto.nombre)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="20019174-32f1-414b-be35-f49edc1e6d18">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14310023-d382-40ff-81ce-1f7ce017684e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{any_value(crm.contacto.apellidos)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="fbb0e428-9413-4fa7-81f4-7ffe2cfe2fef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88a61121-0476-4201-ba70-b94bfb369392"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{any_value(crm.contacto.empresa)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="b9a378b5-38c2-4159-823a-086328672ba2"/>
+				<textFieldExpression><![CDATA[$V{any_value(crm.contacto.nombre)1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="218" splitType="Stretch">
+			<textField>
+				<reportElement x="234" y="105" width="100" height="30" uuid="a693f6b4-654b-428c-a14e-9e785a10d728"/>
+				<textFieldExpression><![CDATA[$P{TITLE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
